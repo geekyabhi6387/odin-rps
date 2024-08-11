@@ -45,10 +45,13 @@ let playGame = function() {
 
     if (humanScore > computerScore) {
         console.log(`${humanScore} : ${computerScore} => You win the game!`);
+        alert("You win!");
     } else if (humanScore < computerScore) {
         console.log(`${humanScore} : ${computerScore} => You lose the game!`);
+        alert("You lose");
     } else {
         console.log(`${humanScore} : ${computerScore} => The game is tied!`);
+        alert("It's tied!");
     }
 }
 
