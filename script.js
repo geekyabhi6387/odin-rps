@@ -36,6 +36,16 @@ let playRound = function(humanChoice, computerChoice) {
     }
 }
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    const rockButton = document.getElementById('rock-button');
+    const paperButton = document.getElementById('paper-button');
+    const scissorsButton = document.getElementById('scissors-button');
+
+    rockButton.addEventListener('click', () => playRound('rock', getComputerChoice()))
+    paperButton.addEventListener('click', () => playRound('paper', getComputerChoice()))
+    scissorsButton.addEventListener('click', () => playRound('scissors', getComputerChoice()))
+});
+
 // let playGame = function() {
 //     for (let n = 0; n < 5; n++) {
 //         const humanSelection = getHumanChoice();
