@@ -8,16 +8,6 @@ let getComputerChoice = function() {
     return choices[selectedChoiceNum];
 };
 
-let getHumanChoice = function() {
-    choice = prompt("Rock, paper or scissors");
-    choice = choice.toLowerCase();
-    if (choice === "rock" || choice === "paper" || choice === "scissors") {
-        return choice;
-    } else {
-        alert("Please enter either rock, paper or scissors!");
-    }
-};
-
 let playRound = function(humanChoice, computerChoice) {
     const humanScoreText = document.getElementById('player-score-para');
     const computerScoreText = document.getElementById('computer-score-para');
@@ -57,24 +47,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
     paperButton.addEventListener('click', () => playRound('paper', getComputerChoice()))
     scissorsButton.addEventListener('click', () => playRound('scissors', getComputerChoice()))
 });
-
-let playGame = function() {
-    for (let n = 0; n < 5; n++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-    }
-
-    if (humanScore > computerScore) {
-        console.log(`${humanScore} : ${computerScore} => You win the game!`);
-        alert("You win!");
-    } else if (humanScore < computerScore) {
-        console.log(`${humanScore} : ${computerScore} => You lose the game!`);
-        alert("You lose");
-    } else {
-        console.log(`${humanScore} : ${computerScore} => The game is tied!`);
-        alert("It's tied!");
-    }
-}
-
-// playGame();
