@@ -47,3 +47,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     paperButton.addEventListener('click', () => playRound('paper', getComputerChoice()))
     scissorsButton.addEventListener('click', () => playRound('scissors', getComputerChoice()))
 });
+
+document.getElementById('refreshBtn').onclick = function() {
+    location.reload();
+};
