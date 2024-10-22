@@ -1,2 +1,2 @@
-# odin-rps
-Simple played in the console Rock-paper-scissors with 5 rounds!
+# Rock-Paper-Scissors
+Simple 5 round game of RPS with the computer
